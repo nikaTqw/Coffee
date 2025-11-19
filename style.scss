@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$primary: #415167;
+$accent-1: #C7A17A;
+$accent-2: #F9F5E8;
+$dark: #151D28;
+$light-grey: #EDF0F5;
+
+@mixin monteserrat_font($weight, $size, $height) {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin nunito_font($weight, $size, $height) {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: $size;
+  line-height: $height;
+}
+
+.displaylarge {
+  @include monteserrat_font(900, 54px, 70px);
+}
+
+.displaymedium {
+  @include monteserrat_font(900, 30px, 34px);
+}
+
+.title {
+  @include nunito_font(900, 24px, 28px);
+}
+
+.sub_title, .price_product{
+  @include nunito_font(700, 20px, 24px);
+}
+
+body {
+  @include nunito_font(500, 16px, 20px);
+}
+
+.discription {
+  @include nunito_font(500, 16px, 20px);
+  font-style: italic
+}
+
+button {
+  @include nunito_font(900, 16px, 20px);
+}
